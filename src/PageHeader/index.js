@@ -6,7 +6,7 @@ import Search from '../Search';
 
 const PageHeader = () => (
 	<div>
-		<div><Link to='/PostFeedback'>Post Feedback></Link></div>
+		<div><Link to='/PostFeedback'>Post Feedback</Link></div>
 		<div>Logout</div>
 		<Search/>
 	</div>

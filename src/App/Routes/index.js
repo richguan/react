@@ -1,9 +1,9 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import FeedbackPage from '../FeedbackPage';
-import LoginUser from '../LoginUser';
-import NewUser from '../NewUser';
-import PostFeedback from '../PostFeedback';
+import FeedbackPage from '../../Feedback/FeedbackPage/index';
+import LoginUser from '../../User/LoginUser/index';
+import NewUser from '../../User/NewUser/index';
+import PostFeedback from '../../Feedback/PostFeedback/index';
 
 const Routes = () => (
 	<main>

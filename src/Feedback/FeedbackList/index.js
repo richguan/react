@@ -1,5 +1,5 @@
 import React from 'react';
-import FeedbackRow from '../FeedbackRow'
+import FeedbackRow from '../FeedbackRow/index'
 
 class FeedbackList extends React.Component {
 	constructor(props) {

@@ -1,5 +1,5 @@
 import React from 'react';
-import PageHeader from '../PageHeader';
+import PageHeader from '../../App/PageHeader/index';
 import FeedbackList from '../FeedbackList';
 
 class FeedbackPage extends React.Component {

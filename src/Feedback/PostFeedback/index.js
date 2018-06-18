@@ -1,5 +1,5 @@
 import React from 'react';
-import RadioList from '../RadioList';
+import RadioList from '../../App/RadioList/index';
 import { Redirect } from 'react-router-dom';
 
 class PostFeedback extends React.Component {

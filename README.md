@@ -16,4 +16,4 @@
 - Search by Positive feedback
 - Search by Negative feedback
 - Post anonymously
-- Posting feedback in modal
+- Posting feedback in modal vs own 'page'

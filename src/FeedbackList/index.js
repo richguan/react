@@ -4,31 +4,33 @@ import FeedbackRow from '../FeedbackRow'
 class FeedbackList extends React.Component {
 	constructor(props) {
 		super(props);
+		this.getFeedback();
 	}
 
 	render() {
-		const someFeedback = this.getFeedback();
 		return (
-			<div>{someFeedback}</div>
+			<div>{this.props.currentList}</div>
 		);
 	}
 
 	// Retrieves feedback list from server
 	getFeedback() {
 		console.log('Retrieving feedback');
-		return this.mockFeedback();
+		const feedbackList = this.createMockFeedback();
+		this.props.initialList(feedbackList);
+		return feedbackList;
 	}
 
-	mockFeedback() {
-		let someFeedback = [],
+	createMockFeedback() {
+		let mockedFeedback = [],
 			counter = 0;
 		for (let i=0;i<10;i++) {
 			const date = counter++,
-				score = Math.floor(Math.random() * Math.floor(4)),
+				score = Math.floor(Math.random() * (5 - 1) + 1),
 				message = 'This is a mocked feedback';
-			someFeedback.push(<FeedbackRow key={i} date={date} message={message} score={score}/>);
+			mockedFeedback.push(<FeedbackRow key={i} date={date} message={message} score={score}/>);
 		}
-		return someFeedback;
+		return mockedFeedback;
 	}
 }
 

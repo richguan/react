@@ -35,9 +35,7 @@ class RadioList extends React.Component {
 	handleOptionChange(e) {
 		console.log(e.target.value);
 		this.props.value(e.target.value);
-		this.setState({
-			selectedOption: e.target.value
-		});
+		this.setState({ selectedOption: e.target.value });
 	}
 }
 

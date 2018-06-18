@@ -1,20 +1,26 @@
 const express = require('express');
-const path = require('path');
-const http = require('http');
+const mysql = require('mysql');
+const bodyParser = require('body-parser');
+const store = require('./store');
 
 const app = express();
 
-// Point static path to dist
-app.use(express.static(path.join(__dirname, '..', 'dist')));
+app.use(express.static('client'));
+app.use(bodyParser.json());
 
-const routes = require('./routes');
-app.use('/', routes);
+app.post('/createUser', (req, res) => {
+	store.createUser(req.body.username, req.body.password)
+		.then(() => res.sendStatus(200));
+});
 
-/** Get port from environment and store in Express. */
-const port = process.env.PORT || '3000';
-app.set('port', port);
+app.post('/login', (req, res) => {
+	store.authenticate(req.body.username, req.body.password)
+		.then(({ success }) => {
+			if (success)
+				res.sendStatus(200);
+			else
+				res.sendStatus(401);
+		});
+});
 
-/** Create HTTP server. */
-const server = http.createServer(app);
-/** Listen on provided port, on all network interfaces. */
-server.listen(port, () => console.log(`Server Running on port ${port}`));
+app.listen(process.env.PORT || 3000);

@@ -1,0 +1,34 @@
+.container {
+  width: 80%;
+}
+
+.option-row {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+  text-align: center;
+  line-height: 20px;
+  padding: 30px 0px 20px 0px;
+}
+
+.radios {
+  width: 400px;
+  display: inline-block;
+}
+.radio-div {
+  display: inline-block;
+  text-align: center;
+}
+
+.text-message {
+  display: block;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 200px;
+}
+
+.radio-input {
+  text-align: center;
+  width: 100%;
+}

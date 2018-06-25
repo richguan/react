@@ -1,0 +1,22 @@
+.header {
+  display: flex;
+  width: 100%;
+  padding: 0px 20px 0px 20px;
+  font-family: sans-serif;
+  font-weight: bold;
+  border-bottom: solid 2px lightgray;
+  line-height: 40px;
+  background-color: #fff5e6;
+}
+
+.score {
+  width: 20%;
+}
+
+.message {
+  width: 60%;
+}
+
+.date {
+  width: 20%;
+}

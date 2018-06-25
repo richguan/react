@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.scss';
 
 class Search extends React.Component {
 	constructor(props) {
@@ -8,7 +9,7 @@ class Search extends React.Component {
 	render() {
 		return (
 			<div>
-				<input type="text" placeholder="Search" onChange={this.updateSearchValue.bind(this)}/>
+				<input class="search-input" type="text" placeholder="Search" onChange={this.updateSearchValue.bind(this)}/>
 			</div>
 		);
 	}

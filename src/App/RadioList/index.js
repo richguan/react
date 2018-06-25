@@ -1,4 +1,5 @@
 import React from 'react';
+import './styles.scss';
 
 class RadioList extends React.Component {
 	constructor(props) {
@@ -11,7 +12,7 @@ class RadioList extends React.Component {
 	render() {
 		const options = this.createRadioOptions();
 		return (
-			<div>{options}</div>
+			<div class="option-row">{options}</div>
 		);
 	}
 
@@ -19,14 +20,14 @@ class RadioList extends React.Component {
 		let options = [];
 		for (let [index, option] of this.props.options.entries()) {
 			options.push(
-				<div key={index}>
-					<span>
-						{option}
-						<input type="radio" value={option}
+				<span class="radios" key={index}>
+					<div>{option}</div>
+					<div class="radio-div">
+						<input class="radio-input" type="radio" value={option}
 							checked={this.state.selectedOption === option}
 							onChange={this.handleOptionChange.bind(this)} />
-					</span>
-				</div>
+					</div>
+				</span>
 			);
 		}
 		return options;

@@ -1,6 +1,7 @@
 import React from 'react';
 import RadioList from '../../App/RadioList/index';
 import { Redirect } from 'react-router-dom';
+import './styles.scss';
 
 class PostFeedback extends React.Component {
 	constructor(props) {
@@ -22,10 +23,10 @@ class PostFeedback extends React.Component {
 		return (
 			<div>
 				PostFeedback
-				<div>
+				<div class="container">
 					<RadioList value={this.updateScore.bind(this)} options={options}/>
-					<textarea value={this.state.messageInput} onChange={(e) => this.setState({messageInput: e.target.value})}/>
-					<button disabled={canSubmit} onClick={this.handleSubmit.bind(this)}>Submit</button>
+					<textarea class="text-message" value={this.state.messageInput} onChange={(e) => this.setState({messageInput: e.target.value})}/>
+					<button class="submit-button" disabled={canSubmit} onClick={this.handleSubmit.bind(this)}>Submit</button>
 				</div>
 			</div>
 		);

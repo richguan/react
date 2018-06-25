@@ -16,4 +16,4 @@
 - Search by Positive feedback
 - Search by Negative feedback
 - Post anonymously
-- Posting feedback in modal vs own 'page'
+- Post feedback page needs to be a modal (missing navigation)
